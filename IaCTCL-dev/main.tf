@@ -1,7 +1,7 @@
 
 locals {
-  region = "ap-northeast-2"
-  aws_region_code = "an2"
+  region = "us-west-1"
+  aws_region_code = "uw2"
 	tags	= {
 		ServiceName = "IaCTCL"
 		Environment	= "dev"
@@ -49,7 +49,7 @@ module "network" {
   vpc_CIDR_DBZone = "192.168.29.160/27"
   vpc_CIDR_Uniq = "100.64.35.192/26"
   vpc_CIDR_Dup = "100.64.0.0/21"
-  azs                 = ["${local.region}a", "${local.region}c"]
+  azs                 = ["${local.region}b", "${local.region}c"]
   snet_fend_CIDR      = ["192.168.29.192/27","192.168.29.224/27"]
   snet_bend_db_CIDR   = ["192.168.29.160/28","192.168.29.176/28"]
   snet_bend_uniq_CIDR = ["100.64.35.192/27","100.64.35.224/27"]
