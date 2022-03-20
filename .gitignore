@@ -1,10 +1,10 @@
 #terraform file exception
 
 # Local .terraform directories
-**/.terraform/*
+*/.terraform/*
+*/.terraform*
 terraform.*
 terraform
-.terraform*
 
 # .tfstate files
 *.tfstate
