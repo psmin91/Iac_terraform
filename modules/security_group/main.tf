@@ -1,11 +1,11 @@
 resource "aws_security_group" "this" {
   
-  name                  = "${var.name}"
+  name                  = var.name
   description           = var.description
   vpc_id                = var.vpc_id
 
   tags	= merge(var.tags, {
-		Name	= 	"${var.prj_name}-${var.env}-${var.aws_region_code}-vpc"
+		Name	= 	"${var.prj_name}-${var.env}-${var.aws_region_code}-${var.name}"
     })
 }
 
